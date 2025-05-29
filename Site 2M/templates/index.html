@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Início{% endblock %}
+
+{% block content %}
+<div class="auth-box">
+    <h2>Bem-vindo!</h2>
+    <p style="color: white; text-align: center;">
+        Você está na página inicial. Explore as funcionalidades do nosso site!
+    </p>
+    
+    <div class="button-container" style="text-align: center;">
+
+        <form action="{{ url_for('login_get') }}" method="get" style="display: inline;">
+            <button type="submit" class="btn-animated" style="margin-right: 10px;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+        </form>
+
+        <form action="{{ url_for('cadastro') }}" method="get" style="display: inline;">
+            <button type="submit" class="btn-animated" style="margin-left: 10px;">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Cadastro
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
